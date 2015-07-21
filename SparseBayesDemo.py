@@ -398,7 +398,3 @@ def distSquared(X,Y):
     ny = np.size(Y, 0)
     D2 =  ( np.multiply(X, X).sum(1)  * np.ones((1, ny)) ) + ( np.ones((nx, 1)) * np.multiply(Y, Y).sum(1).T  ) - 2*X*Y.T
     return D2
-   
-   
-   
-SparseBayesDemo('Gaussian', 2)
