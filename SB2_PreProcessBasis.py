@@ -1,4 +1,7 @@
 
+# The following is a Python translation of a MATLAB file originally written principally by Mike Tipping
+# as part of his SparseBayes software library. Initially published on GitHub on July 21st, 2015.
+
 # SB2_PREPROCESSBASIS  Do basis matrix pre-processing for SPARSEBAYES
 #
 # [BASIS, SCALES] = SB2_PREPROCESSBASIS(BASIS)
