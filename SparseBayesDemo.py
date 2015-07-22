@@ -65,6 +65,7 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
 import math
 from SB2_Likelihoods import SB2_Likelihoods
 from SB2_UserOptions import SB2_UserOptions
@@ -208,16 +209,16 @@ def SparseBayesDemo(*args):
     SP_WEIGHTS  = 5
     SP_GAMMA    = 6
         
-    plt.figure(1)
+    fig = plt.figure()
     plt.clf()
     TITLE_SIZE    = 12
         
     if (dimension == 1):
-        plt.subplot(fRows,fCols,SP_DATA)# axisbg='k')
+        plt.subplot(fRows,fCols,SP_DATA)
         plt.plot(X,Outputs,'k.', clip_on=False)
     else: 
-        #plt.plot3(X[:,1],X[:,2],Outputs,'w.')
-        pass
+        ax = fig.add_subplot(fRows,fCols,SP_DATA, projection='3d')
+        #ax.scatter(X[:,0],X[:,1],Outputs, 'k.')
     
     t_    = 'Generated data ({0} points)'.format(N)
     plt.title(t_,fontsize=TITLE_SIZE)
